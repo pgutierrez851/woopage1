@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasar Wallpaper - Pusat Wallpaper Medan</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter & Playfair Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:italic,wght@600&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Playfair Display', 'serif'],
+                    },
+                    animation: {
+                        'slow-spin': 'spin 12s linear infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        .dark .glass-card {
+            background: rgba(15, 15, 15, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .ultra-round {
+            border-radius: 3.5rem;
+        }
+    </style>
+</head>
+<body class="bg-[#fcfcfc] text-zinc-900 dark:bg-[#030303] dark:text-zinc-100 transition-colors duration-700 selection:bg-zinc-200 dark:selection:bg-zinc-800 antialiased">
+
+    <!-- Theme Toggle -->
+    <div class="fixed top-8 right-8 z-50">
+        <button id="theme-toggle" class="flex items-center justify-center w-12 h-12 rounded-full bg-white dark:bg-zinc-900 shadow-xl border border-zinc-100 dark:border-zinc-800 hover:scale-110 transition-all duration-300">
+            <i data-lucide="moon" id="theme-toggle-dark-icon" class="w-5 h-5 text-zinc-600 dark:text-zinc-400 hidden"></i>
+            <i data-lucide="sun" id="theme-toggle-light-icon" class="w-5 h-5 text-zinc-600 dark:text-zinc-400 hidden"></i>
+        </button>
+    </div>
+
+    <!-- WhatsApp Floating Widget -->
+    <a href="https://wa.me/628116397878" target="_blank" class="fixed bottom-8 right-8 z-50 flex items-center gap-3 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 pl-5 pr-6 py-4 rounded-full shadow-2xl hover:-translate-y-2 transition-all duration-300 group">
+        <div class="relative flex items-center justify-center">
+            <div class="absolute inset-0 bg-emerald-500 rounded-full animate-ping opacity-25 group-hover:opacity-40"></div>
+            <i data-lucide="message-square" class="w-5 h-5"></i>
+        </div>
+        <span class="text-sm font-bold tracking-tight">Konsultasi Gratis</span>
+    </a>
+
+    <div class="min-h-screen flex flex-col items-center justify-center px-6 py-24 relative overflow-hidden">
+        
+        <!-- Background Elements -->
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-50 dark:bg-blue-900/10 rounded-full mix-blend-multiply filter blur-[100px] opacity-40 animate-slow-spin"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-50 dark:bg-purple-900/10 rounded-full mix-blend-multiply filter blur-[100px] opacity-40 animate-slow-spin"></div>
+        
+        <!-- Hero Section -->
+        <header class="text-center mb-20 fade-in-section" style="animation-delay: 100ms;">
+            <p class="text-[10px] uppercase tracking-[0.5em] font-black text-zinc-400 dark:text-zinc-600 mb-6">Pusat Wallpaper Medan</p>
+            <h1 class="text-7xl md:text-9xl font-display italic tracking-tighter mb-8 leading-none">Pasar <br> Wallpaper</h1>
+            <div class="inline-flex items-center gap-4 px-6 py-2.5 ultra-round border border-zinc-200 dark:border-zinc-800 text-[11px] uppercase tracking-[0.2em] font-bold text-zinc-500 bg-white/50 dark:bg-zinc-900/50 backdrop-blur-md">
+                <span class="relative flex h-2.5 w-2.5">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                </span>
+                Showroom Johor &bull; Medan
+            </div>
+        </header>
+
+        <!-- Bento Grid Layout -->
+        <div class="w-full max-w-6xl grid grid-cols-1 md:grid-cols-12 gap-6 fade-in-section" style="animation-delay: 300ms;">
+            
+            <!-- Lokasi (Main Card) -->
+            <div class="md:col-span-8 glass-card p-12 ultra-round shadow-sm flex flex-col justify-between group overflow-hidden relative">
+                <div class="absolute -top-10 -right-10 p-8 text-zinc-100 dark:text-zinc-800/30 group-hover:rotate-12 transition-transform duration-1000">
+                    <i data-lucide="map" class="w-64 h-64"></i>
+                </div>
+                
+                <div class="space-y-12 relative z-10">
+                    <div>
+                        <h2 class="text-[11px] uppercase tracking-[0.4em] font-black text-zinc-400 mb-6">Lokasi & Alamat</h2>
+                        <p class="text-3xl md:text-4xl font-medium leading-[1.1] tracking-tight text-zinc-800 dark:text-zinc-200">
+                            Jl. Karya Wisata No.17, <br>
+                            Medan Johor, Kota Medan, <br>
+                            Sumatera Utara 20143
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-10 pt-6">
+                        <div>
+                            <h3 class="text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-400 mb-3">Jam Buka</h3>
+                            <p class="text-sm font-semibold">09.00 - 18.00 <br> <span class="text-zinc-400 font-normal italic">Senin - Sabtu</span></p>
+                        </div>
+                        <div>
+                            <h3 class="text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-400 mb-3">WhatsApp Kami</h3>
+                            <!-- Tautan nomor HP yang langsung terhubung ke WhatsApp -->
+                            <a href="https://wa.me/628116397878" target="_blank" class="text-sm font-semibold border-b-2 border-zinc-200 dark:border-zinc-800 pb-1 hover:border-zinc-900 dark:hover:border-zinc-100 transition-all">0811-6397-878</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16 relative z-10">
+                    <a href="https://maps.app.goo.gl/p7ecNuKv79jPBT9X9" target="_blank" class="inline-flex items-center gap-3 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 px-8 py-4 ultra-round text-xs font-bold uppercase tracking-widest hover:scale-105 transition-all shadow-xl shadow-zinc-900/20 dark:shadow-none">
+                        Petunjuk Rute <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Image 1 -->
+            <div class="md:col-span-4 h-[400px] md:h-auto overflow-hidden ultra-round">
+                <img src="https://woopage.site/ss1.jpg" alt="Interior Preview 1" class="w-full h-full object-cover hover:scale-110 transition-transform duration-1000 grayscale-[20%] hover:grayscale-0" onerror="this.src='https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1000&auto=format&fit=crop'">
+            </div>
+
+            <!-- Image 2 -->
+            <div class="md:col-span-4 h-[300px] overflow-hidden ultra-round">
+                <img src="https://woopage.site/ss2.jpg" alt="Interior Preview 2" class="w-full h-full object-cover hover:scale-110 transition-transform duration-1000" onerror="this.src='https://images.unsplash.com/photo-1616489953149-808603632420?q=80&w=1000&auto=format&fit=crop'">
+            </div>
+
+            <!-- Produk & Layanan -->
+            <div class="md:col-span-4 glass-card p-10 ultra-round flex flex-col justify-center">
+                <h3 class="text-[11px] uppercase tracking-[0.4em] font-black text-zinc-400 mb-8">Katalog Kami</h3>
+                <ul class="space-y-6">
+                    <li class="flex items-center justify-between text-sm font-semibold group cursor-default">
+                        <span>Wallpaper Premium</span>
+                        <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </li>
+                    <li class="flex items-center justify-between text-sm font-semibold group cursor-default">
+                        <span>Vinyl & SPC Flooring</span>
+                        <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </li>
+                    <li class="flex items-center justify-between text-sm font-semibold group cursor-default">
+                        <span>Parket Mewah</span>
+                        <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </li>
+                    <li class="flex items-center justify-between text-sm font-semibold group cursor-default">
+                        <span>Pemasangan Rapi</span>
+                        <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Image 3 -->
+            <div class="md:col-span-4 h-[300px] overflow-hidden ultra-round">
+                <img src="https://woopage.site/ss3.jpg" alt="Interior Preview 3" class="w-full h-full object-cover hover:scale-110 transition-transform duration-1000" onerror="this.src='https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?q=80&w=1000&auto=format&fit=crop'">
+            </div>
+
+            <!-- Social Card -->
+            <a href="https://wa.me/628116397878" target="_blank" class="md:col-span-12 bg-zinc-900 dark:bg-white p-12 ultra-round group cursor-pointer overflow-hidden relative block">
+                <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div>
+                        <h4 class="text-white dark:text-zinc-900 text-3xl font-medium tracking-tight mb-2 italic font-display">Hubungi Kami via WhatsApp</h4>
+                        <p class="text-zinc-400 dark:text-zinc-500 text-sm tracking-wide">Konsultasi motif dan estimasi biaya gratis sekarang juga.</p>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <span class="text-[11px] uppercase font-bold text-white dark:text-zinc-900 tracking-[0.3em]">Mulai Chat</span>
+                        <div class="w-16 h-16 rounded-full border border-zinc-700 dark:border-zinc-200 flex items-center justify-center group-hover:bg-white dark:group-hover:bg-zinc-900 transition-all duration-500">
+                            <i data-lucide="message-circle" class="w-6 h-6 text-white dark:text-zinc-900 group-hover:text-zinc-900 dark:group-hover:text-white"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-24 text-center fade-in-section" style="animation-delay: 500ms;">
+            <p class="text-[10px] text-zinc-400 dark:text-zinc-600 uppercase tracking-[0.5em] font-bold mb-4">
+                &copy; 2026 Pasar Wallpaper Medan
+            </p>
+            <div class="flex items-center justify-center gap-4 text-zinc-300 dark:text-zinc-800">
+                <div class="h-[1px] w-8 bg-current"></div>
+                <p class="text-[9px] uppercase tracking-widest font-black">Quality First &bull; Aesthetic Always</p>
+                <div class="h-[1px] w-8 bg-current"></div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const darkIcon = document.getElementById('theme-toggle-dark-icon');
+        const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+        function applyTheme() {
+            if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+                lightIcon.classList.remove('hidden');
+                darkIcon.classList.add('hidden');
+            } else {
+                document.documentElement.classList.remove('dark');
+                darkIcon.classList.remove('hidden');
+                lightIcon.classList.add('hidden');
+            }
+        }
+
+        applyTheme();
+
+        themeToggleBtn.addEventListener('click', function() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+            applyTheme();
+        });
+    </script>
+</body>
+</html>
