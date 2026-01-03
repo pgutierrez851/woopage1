@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Idul Fitri</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Sacramento&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #064e3b 0%, #065f46 100%);
+            font-family: 'Quicksand', sans-serif;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        /* Ornamen Lingkaran Latar Belakang */
+        .bg-ornament {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        /* Kartu Ucapan */
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .icon {
+            font-size: 50px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        h1 {
+            font-family: 'Sacramento', cursive;
+            font-size: 3.5rem;
+            margin: 10px 0;
+            color: #fbbf24; /* Warna Emas */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: #d1fae5;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 1rem;
+            color: #ecfdf5;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        /* Animasi Bintang Kecil */
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-ornament" style="top: -100px; left: -100px;"></div>
+    <div class="bg-ornament" style="bottom: -100px; right: -100px;"></div>
+
+    <div class="card">
+        <span class="icon">🌙</span>
+        <h2>Selamat Hari Raya</h2>
+        <h1>Idul Fitri</h1>
+        <p>
+            Taqabbalallahu minna wa minkum.<br>
+            Semoga amal ibadah kita diterima oleh Allah SWT.<br>
+            Mari bersihkan hati, kembali fitrah di hari yang suci ini.
+        </p>
+        
+        <p style="font-weight: bold; margin-top: 20px; color: #fbbf24;">
+            Mohon Maaf Lahir & Batin
+        </p>
+
+        <div class="footer">
+            — Dari Sahabatmu —
+        </div>
+    </div>
+
+</body>
+</html>
